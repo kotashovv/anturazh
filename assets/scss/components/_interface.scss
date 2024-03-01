@@ -1,0 +1,62 @@
+.main-btn {
+    display: block;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 12px 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #4999E4;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    &.trans-btn {
+        color: #4999E4;
+        border: 2px solid #4999E4;
+        background-color: transparent;
+    }
+}
+
+.burger-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        left: 2.5px;
+        top: 5px;
+        width: calc(100% - 5px);
+        height: 2px;
+        border-radius: 1px;
+        background-color: #000;
+        opacity: .5;
+    }
+    span {
+        position: absolute;
+        left: 2.5px;
+        top: calc(50% - 1px);
+        width: calc(100% - 5px);
+        height: 2px;
+        border-radius: 1px;
+        background-color: #000;
+        opacity: .5;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 2.5px;
+        top: calc(100% - 7px);
+        width: calc(100% - 5px);
+        height: 2px;
+        border-radius: 1px;
+        background-color: #000;
+        opacity: .5;
+    }
+}
+

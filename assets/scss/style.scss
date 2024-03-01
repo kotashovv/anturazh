@@ -1,0 +1,32 @@
+
+// нормализация стиля
+@import 'components/normalize';
+
+// глобальные стили и переменные
+@import 'components/global';
+
+// интерфейс 
+@import 'components/interface';
+
+// шапка
+@import 'components/header';
+
+// главный баннер
+@import 'components/hero';
+
+// слайдер-каталог
+@import 'components/catalog_slider';
+// партнеры
+@import 'components/partners';
+
+// услуги
+@import 'components/factory';
+
+//Офер вопрос
+@import 'components/offer';
+
+//Офер вопрос
+@import 'components/articlesSlider';
+
+
+@import 'components/footer';
