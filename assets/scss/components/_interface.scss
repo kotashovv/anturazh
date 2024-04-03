@@ -10,6 +10,7 @@
     cursor: pointer;
     text-decoration: none;
     border: none;
+
     &.trans-btn {
         color: #4999E4;
         border: 2px solid #4999E4;
@@ -26,6 +27,7 @@
     background-color: transparent;
     box-sizing: border-box;
     cursor: pointer;
+
     &::before {
         content: '';
         position: absolute;
@@ -37,6 +39,7 @@
         background-color: #000;
         opacity: .5;
     }
+
     span {
         position: absolute;
         left: 2.5px;
@@ -47,6 +50,7 @@
         background-color: #000;
         opacity: .5;
     }
+
     &::after {
         content: '';
         position: absolute;
@@ -60,3 +64,85 @@
     }
 }
 
+
+.close-menu {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 2px);
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        border-radius: 1px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 2px);
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        border-radius: 1px;
+        transform: rotate(-45deg);
+    }
+}
+
+.black_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: .5s ease;
+    opacity: 0;
+    z-index: 4;
+    background-color: #000;
+    visibility: hidden;
+
+    &.active {
+        visibility: visible;
+        opacity: .4;
+    }
+}
+
+
+.cart-btn {
+    width: 100%;
+    display: block;
+    background-color: #51a8ff;
+    color: #fff !important;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 18px;
+    transition: .35s ease;
+    &:hover {
+        background-color: #188bff;
+    }
+}
+
+.btn-category-show {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: #188bff;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}

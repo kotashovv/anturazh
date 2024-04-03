@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/libs/effect-shutters.min.css">
     <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Title</title>
@@ -90,35 +91,80 @@
                 </div>
             </div>
         </header>
+
+        <div class="mobile__menu">
+            <button class="close-menu"></button>
+            <div class="mobile__actions">
+                <a class="mobile__profile" href="#">
+                    <img src="assets/imgs/profile.jpg" alt="">
+                    <span>Профиль</span>
+                </a>
+                <a class="mobile__cart" href="#">
+                    <img src="assets/imgs/icons/cart.svg" alt="">Корзина
+                </a>
+                <a href="#" class="mobile__favorite">
+                    <img src="assets/imgs/icons/heart.svg" alt="">Избранное
+                </a>
+            </div>
+            <nav class="mobile__nav">
+                <ul>
+                    <li>
+                        <a href="#">Каталог</a>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Бренды</a>
+                    </li>
+                    <li>
+                        <a href="#">Услуги</a>
+                    </li>
+                    <li>
+                        <a href="#">Советы</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="black_modal">
+            
+        </div>
         
         <main class="main">
             <section class="hero">
                 <div class="container">
                     <div class="hero__slider swiper">
                         <div class="hero__slider-wrapper swiper-wrapper">
-                            <article style="background-image: url(assets/imgs/slide1.png);"
+                            <article
                                 class="hero__slider-slide swiper-slide">
-                                <h1>Галерея вариантов дизайна</h1>
-                                <p>
+                                <img class="swiper-gl-image" src="assets/imgs/slide1.png" alt="">
+                                <h1 data-swiper-parallax="10%">Галерея вариантов дизайна</h1>
+                                <p data-swiper-parallax="10%">
                                     С фурнитурой Hettich в ваших проектах
                                 </p>
-                                <a class="main-btn" href="#">Подробнее</a>
+                                <a data-swiper-parallax="15%" class="main-btn" href="#">Подробнее</a>
                             </article>
-                            <article style="background-image: url(assets/imgs/slide2.png);"
+                            <article
                                 class="hero__slider-slide swiper-slide">
-                                <h1>Галерея вариантов дизайна</h1>
-                                <p>
+                                <img class="swiper-gl-image" src="assets/imgs/slide2.png" alt="">
+                                <h1 data-swiper-parallax="10%">Галерея вариантов дизайна</h1>
+                                <p data-swiper-parallax="10%">
                                     С фурнитурой Hettich в ваших проектах
                                 </p>
-                                <a class="main-btn" href="#">Подробнее</a>
+                                <a data-swiper-parallax="15%" class="main-btn" href="#">Подробнее</a>
                             </article>
-                            <article style="background-image: url(assets/imgs/slide3.png);"
+                            <article
                                 class="hero__slider-slide swiper-slide">
-                                <h1>Галерея вариантов дизайна</h1>
-                                <p>
+                                <img class="swiper-gl-image" src="assets/imgs/slide3.png" alt="">
+                                <h1 data-swiper-parallax="10%">Галерея вариантов дизайна</h1>
+                                <p data-swiper-parallax="10%">
                                     С фурнитурой Hettich в ваших проектах
                                 </p>
-                                <a class="main-btn" href="#">Подробнее</a>
+                                <a data-swiper-parallax="15%" class="main-btn" href="#">Подробнее</a>
                             </article>
                         </div>
                     </div>
@@ -675,6 +721,8 @@
         </footer>
     </div>
     <script src="assets/libs/swiper-bundle.min.js"></script>
+    <script src="assets/libs/effect-shutters.min.js"></script>
+    <script src="assets/libs/swiper-gl.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 

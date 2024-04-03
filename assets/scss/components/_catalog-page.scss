@@ -1,0 +1,187 @@
+.catalogpage {
+
+    // .catalogpage__wrap
+
+    &__wrap {
+    }
+}
+.container {
+}
+.page {
+
+    // .page__title
+
+    &__title {
+    }
+}
+.catalog {
+    &__category {
+        box-sizing: border-box;
+        padding: 20px 30px;
+        background-color: #fff;
+        border-radius: 25px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 0 10px #00000030;
+       p {
+        font-size: 24px;
+        font-weight: 700;
+        display: block;
+        margin: 15px 0 20px;
+       }
+       
+    }
+    &__category-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__category-lists {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        overflow: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: .45s ease;
+        &.active {
+            max-height: max-content;
+            opacity: 1;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 10px 15px;
+            box-sizing: border-box;
+            width: calc(25% - 20px);
+            li {
+                a {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #000;
+                    text-decoration: none;
+                    &:hover {
+                        color: #188bff;
+                    }
+                }
+            }
+        }
+    }
+    // .catalog__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        margin: 0 -10px 25px;
+    }
+
+    // .catalog__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: calc(20% - 20px);
+        margin: 0 10px 20px;
+        box-sizing: border-box;
+        color: #000;
+        &:hover {
+            .img {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .details {
+            .item-cat {
+                font-size: 12px;
+                opacity: .8;
+            }
+            .item-name {
+                margin-top: 0;
+                font-weight: 500;
+                margin-bottom: 5px;
+                font-size: 18px;
+            }
+            .item-price {
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+        .action {
+            padding-top: 10px;
+            a {
+                
+            }
+        }
+        .img {
+            display: block;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            img {
+                transition: .15s ease;
+                display: block;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+    }
+}
+
+@media(max-width:920px) {
+    .catalog {
+        &__item {
+            width: calc(25% - 20px);
+        }
+    }
+}
+@media(max-width:768px) {
+    .catalog {
+        &__category {
+            border-radius: 10px;
+            padding: 15px 15px 15px;
+            p {
+                font-size: 16px;
+                margin-right: 15px;
+            }
+        }
+        &__category-head {
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+        &__item {
+            width: calc(33.33% - 20px);
+            .img {
+                height: auto;
+            }
+        }
+        &__category-lists {
+            ul {
+                width: calc(33.33% - 20px);
+            }
+        }
+    }
+}
+@media(max-width:620px) {
+    .catalog {
+        &__item {
+            width: calc(50% - 20px);
+        }
+        &__category-lists {
+            ul {
+                width: calc(50% - 20px);
+            }
+        }
+    }
+}
