@@ -183,4 +183,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    const productSliderPreview = new Swiper('.product-page__slider-preview', {
+        slidesPerView: 3,
+        spaceBetween: 15,
+        navigation: {
+            prevEl: '.slider-preview-up',
+            nextEl: '.slider-preview-down',
+        },
+        breakpoints: {
+            1: {
+                direction: 'horizontal',
+
+            }, 
+            560: {
+                direction: 'vertical',
+            }
+        }
+
+    })
+    const productSlider = new Swiper('.product-page__slider-product', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        thumbs: {
+            swiper: productSliderPreview
+          }
+    })
+
+
+    // логика раскрытия текст в продукте
+
+    const showMoreTextProduct = document.querySelector('.product-page__btn-show-more');
+
+    if (showMoreTextProduct) {
+        const hiddenText = document.querySelector('.product-page__desc');
+
+        showMoreTextProduct.addEventListener('click', (e)=>{
+            let target = e.target;
+            if (target.classList.contains('active')) {
+                CloseText();
+                target.classList.remove('active');
+                e.target.innerHTML = 'Показать больше';
+
+            } else {
+                OpenText();
+                target.classList.add('active');
+                e.target.innerHTML = 'Скрыть';
+            }
+        })
+
+        function CloseText() {
+            hiddenText.classList.remove('active');
+        } 
+
+        function OpenText() {
+            hiddenText.classList.add('active');
+
+        }
+    }
+    
 })
