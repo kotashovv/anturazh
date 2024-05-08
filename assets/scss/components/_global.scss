@@ -17,12 +17,14 @@ body {
 
 .section-title {
     margin: 0 0 30px;
+
     .title-elem {
         margin: 0;
         margin-bottom: 15px;
         font-size: 24px;
         font-weight: 700;
         display: block;
+
         @media(max-width:920px) {
             font-size: 20px;
         }
@@ -40,6 +42,7 @@ body {
 .breadcrumbs {
     margin: 20px 0 30px;
     display: flex;
+
     a {
         font-weight: 500;
         color: #000;
@@ -48,9 +51,11 @@ body {
         position: relative;
         margin-right: 10px;
         padding-right: 20px;
+
         &:hover {
             text-decoration: underline;
         }
+
         &::before {
             content: '';
             position: absolute;
@@ -61,6 +66,7 @@ body {
             background-color: #000;
             transform: rotate(30deg);
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -71,13 +77,16 @@ body {
             background-color: #000;
             transform: rotate(-30deg);
         }
+
         &:last-child {
             margin: 0;
             pointer-events: none;
             opacity: .7;
+
             &::before {
                 display: none;
             }
+
             &::after {
                 display: none;
             }
@@ -88,6 +97,7 @@ body {
 .page {
     &__title {
         margin: 20px 0 30px;
+
         h1 {
             margin: 0;
             font-size: 28px;
@@ -101,6 +111,7 @@ body {
     margin: 0 auto 30px;
     display: flex;
     align-items: center;
+
     button {
         border: none;
         background-color: transparent;
@@ -108,15 +119,18 @@ body {
         font-size: 18px;
         cursor: pointer;
         transition: .45s ease;
+
         &:hover {
             color: #1E90FF;
         }
     }
+
     .pagination__nums {
         margin: 0 15px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
+
         a {
             font-size: 16px;
             color: #000;
@@ -125,11 +139,55 @@ body {
             margin: 0 2px;
             padding: 5px;
             transition: .35s ease;
+
             &:hover {
                 color: #1E90FF;
             }
+
             &.active {
                 color: #1E90FF;
+            }
+        }
+    }
+}
+
+.single-wrap {
+    box-sizing: border-box;
+    padding: 30px 0;
+    color: #000;
+    font-size: 16px;
+    font-family: $font;
+
+    b,
+    strong {
+        font-size: 18px;
+    }
+    a {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 700;
+        color: #1E90FF;
+        text-decoration: none;
+    }
+    .single__title {
+
+        h1 {
+            display: block;
+            font-size: 24px;
+            color: #000;
+        }
+    }
+
+    @media(max-width:620px) {
+        padding: 30px 0;
+        font-size: 14px;
+
+        .single__title {
+
+            h1 {
+                display: block;
+                margin: 0;
+                margin-bottom: 20px;
             }
         }
     }

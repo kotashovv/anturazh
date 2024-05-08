@@ -106,13 +106,19 @@
 
     // .product-page__slider-product-wrap
 
-    &__slider-product-wrap {}
+    &__slider-product-wrap {
+        
+    }
 
     // .product-page__slider-product-slide
 
     &__slider-product-slide {
         max-height: 560px;
-
+        transition: .45s ease;
+        opacity: .5;
+        &.swiper-slide-active {
+            opacity: 1;
+        }
         img {
             height: 100%;
             width: 100%;

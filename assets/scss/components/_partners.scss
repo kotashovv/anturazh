@@ -13,11 +13,17 @@
         box-sizing: border-box;
     }
 
+    &__slider-wrapper {
+        align-items: stretch;
+    }
+
     // .partners__slider-slide
 
     &__slider-slide {
         display: flex;
         justify-content: center;
+        height: auto;
+        align-items: center;
         &:hover {
             img {
                 filter: grayscale(0);
